@@ -47,20 +47,23 @@
                 Fields marked as required must be completed before the form can be submitted.
             </p>
 
-            <form action="#" method="post">
+            <p id="saved-favorites" class="status-message" role="status"></p>
+            <form id="inquiry-form" action="#" method="post" novalidate>
                 <fieldset>
                     <legend>Customer Information</legend>
 
                     <p>
                         <label for="name">Name:</label><br>
                         <input type="text" id="name" name="name"
-                               autocomplete="name" required>
+                               autocomplete="name" required aria-describedby="name-error">
+                        <span class="field-error" id="name-error" aria-live="polite"></span>
                     </p>
 
                     <p>
                         <label for="email">Email:</label><br>
                         <input type="email" id="email" name="email"
-                               autocomplete="email" required>
+                               autocomplete="email" required aria-describedby="email-error">
+                        <span class="field-error" id="email-error" aria-live="polite"></span>
                     </p>
                 </fieldset>
 
@@ -69,10 +72,12 @@
 
                     <p>
                         <label for="pickup-date">Requested pickup date:</label><br>
-                        <input type="date" id="pickup-date" name="pickup-date" required>
+                        <input type="date" id="pickup-date" name="pickup-date" required aria-describedby="pickup-date-error">
+                        <span class="field-error" id="pickup-date-error" aria-live="polite"></span>
                     </p>
 
                     <p>Request type:</p>
+                    <span class="field-error" id="request-type-error" aria-live="polite"></span>
                     <p>
                         <input type="radio" id="preorder" name="request-type"
                                value="preorder" required>
@@ -92,7 +97,8 @@
                     <p>
                         <label for="item-details">Item details:</label><br>
                         <textarea id="item-details" name="item-details" rows="6" cols="45"
-                                  minlength="5" required></textarea>
+                                  minlength="5" required aria-describedby="item-details-error"></textarea>
+                        <span class="field-error" id="item-details-error" aria-live="polite"></span>
                     </p>
 
                     <p>
@@ -102,7 +108,9 @@
                     </p>
                 </fieldset>
 
-                <button type="submit">Submit Request</button>
+                <button type="submit">Review Request</button>
+                <p id="form-status" class="status-message" role="status" aria-live="polite"></p>
+                <p class="form-note">Demo form for coursework: requests are checked locally but are not sent to a bakery.</p>
             </form>
         </section>
     </main>
@@ -111,5 +119,6 @@
         <p>&copy; 2026 North Star Bakery. Freshly baked for our community.</p>
         <p><a href="products.html">Review our product categories</a></p>
     </footer>
+    <script src="app.js" defer></script>
 </body>
 </html>
