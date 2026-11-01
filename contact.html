@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery | Contact and Pre-Orders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/bakery-logo_c.png"
+                 alt="North Star Bakery logo with a loaf of bread and wheat stalk"
+                 width="240">
+        </a>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact and Pre-Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Contact and Pre-Order Requests</h1>
+
+        <section aria-labelledby="location-heading">
+            <h2 id="location-heading">Visit the Bakery</h2>
+            <address>
+                North Star Bakery<br>
+                214 North Star Avenue<br>
+                Neighborhood Center
+            </address>
+            <p>
+                Monday-Friday: 6:30 a.m.-6:00 p.m.<br>
+                Saturday: 7:00 a.m.-4:00 p.m.<br>
+                Sunday: 8:00 a.m.-2:00 p.m.
+            </p>
+        </section>
+
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Send an Inquiry or Pre-Order Request</h2>
+            <p>
+                Use this form to ask a question or tell us what you would like to pick up.
+                Fields marked as required must be completed before the form can be submitted.
+            </p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Customer Information</legend>
+
+                    <p>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name"
+                               autocomplete="name" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"
+                               autocomplete="email" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pre-Order or Inquiry Details</legend>
+
+                    <p>
+                        <label for="pickup-date">Requested pickup date:</label><br>
+                        <input type="date" id="pickup-date" name="pickup-date" required>
+                    </p>
+
+                    <p>Request type:</p>
+                    <p>
+                        <input type="radio" id="preorder" name="request-type"
+                               value="preorder" required>
+                        <label for="preorder">Pre-order</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="question" name="request-type"
+                               value="general-question">
+                        <label for="question">General question</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="cake" name="request-type"
+                               value="cake-inquiry">
+                        <label for="cake">Cake or event inquiry</label>
+                    </p>
+
+                    <p>
+                        <label for="item-details">Item details:</label><br>
+                        <textarea id="item-details" name="item-details" rows="6" cols="45"
+                                  minlength="5" required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="allergy-notes">Allergy notes, if applicable:</label><br>
+                        <textarea id="allergy-notes" name="allergy-notes"
+                                  rows="4" cols="45"></textarea>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery. Freshly baked for our community.</p>
+        <p><a href="products.html">Review our product categories</a></p>
+    </footer>
+</body>
+</html>
